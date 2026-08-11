@@ -1,0 +1,23 @@
+* { box-sizing: border-box; }
+body {
+  width: 340px;
+  margin: 0;
+  background: #ffffff;
+  color: #111c2d;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.card { padding: 14px; }
+.top { display: flex; justify-content: space-between; align-items: flex-start; padding-bottom: 12px; border-bottom: 1px solid #f0f3ff; }
+h1 { margin: 0; font-size: 16px; line-height: 24px; font-weight: 600; }
+.status { margin: 4px 0 0; color: #434655; font-size: 12px; display: flex; align-items: center; gap: 6px; }
+.dot { width: 7px; height: 7px; border-radius: 50%; background: #16a34a; display: inline-block; }
+.row { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid #f0f3ff; font-size: 12px; line-height: 16px; }
+.row span { color: #434655; }
+.row strong { color: #111c2d; font-weight: 600; text-align: right; }
+button {
+  width: 100%; margin-top: 12px; border: 0; border-radius: 4px;
+  background: #004ac6; color: #fff; padding: 9px 12px;
+  font-size: 12px; line-height: 16px; font-weight: 600; cursor: pointer;
+}
+button:disabled { opacity: .45; cursor: default; }
+.message { min-height: 16px; margin: 7px 0 0; color: #737686; font-size: 11px; line-height: 16px; text-align: center; }

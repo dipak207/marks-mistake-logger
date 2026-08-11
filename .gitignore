@@ -1,0 +1,7 @@
+dist.pem
+*.pem
+*.crx
+node_modules/
+.env
+credentials.json
+captured student data

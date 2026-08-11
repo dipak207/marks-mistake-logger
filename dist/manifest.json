@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "MARKS Mistake Logger",
+  "version": "0.1.0",
+  "description": "Save wrong MARKS questions to Google Sheets with minimal reflection.",
+  "permissions": ["storage", "identity"],
+  "host_permissions": [
+    "https://web.getmarks.app/*",
+    "https://sheets.googleapis.com/*"
+  ],
+  "oauth2": {
+    "client_id": "239852549348-nqcfa8a23jtpuj1r13bbvbaopqmtbdif.apps.googleusercontent.com",
+    "scopes": ["https://www.googleapis.com/auth/spreadsheets"]
+  },
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "action": {
+    "default_title": "MARKS Mistake Logger",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://web.getmarks.app/*"],
+      "js": ["content/main-world.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://web.getmarks.app/*"],
+      "js": ["content/content.js"],
+      "run_at": "document_idle",
+      "world": "ISOLATED"
+    }
+  ]
+}

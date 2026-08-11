@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MARKS Mistake Logger</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="card">
+      <div class="top">
+        <div>
+          <h1>MARKS Mistake Logger</h1>
+          <p id="tracking" class="status"><span class="dot"></span>Tracking active</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <span>Google Sheets</span>
+        <strong id="connection">Checking…</strong>
+      </div>
+      <div class="row">
+        <span>Wrong questions</span>
+        <strong id="wrong-count">0</strong>
+      </div>
+      <div class="row">
+        <span>Mistakes saved</span>
+        <strong id="saved-count">0</strong>
+      </div>
+
+      <button id="primary" disabled>Open Google Sheet</button>
+      <p id="message" class="message"></p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
